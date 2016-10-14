@@ -1,0 +1,62 @@
+
+/* Fonts & Basic */
+
+	@font-face {
+		font-family: Flama;
+		src: url(../assets/flama-light.otf);
+	}
+	@font-face {
+		font-family: Flama;
+		src: url(../assets/flama-black.otf);
+		font-weight: bolder;
+	}
+	@font-face {
+		font-family: Flama Cond;
+		src: url(../assets/flama-cond-basic.otf);
+	}
+
+	body {
+		margin: 0;
+		background: black;
+		font-family: Flama, sans-serif;
+		font-size: 18px;
+	}
+	a {
+		color: yellow;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	ul {
+		padding: 0;
+	}
+	.hide {
+		display: none;
+	}
+
+
+
+
+/* Structure */
+
+	video {
+		background: url('../assets/burger_fallback.jpg') no-repeat;
+		background-size: cover;
+		transition: 1s opacity;
+	}
+
+
+
+/* Content */
+
+	.content {
+	}
+
+
+
+
+
+/* Queries */
+	@media(max-width:425px) {
+	}
+	@media screen and (max-device-width: 800px) {
+	}
