@@ -2,24 +2,26 @@
 /* Fonts & Basic */
 
 	@font-face {
-		font-family: Flama;
+		font-family: FlamaLi;
 		src: url(../assets/flama-light.otf);
 	}
 	@font-face {
-		font-family: Flama;
+		font-family: FlamaBl;
 		src: url(../assets/flama-black.otf);
 		font-weight: bolder;
 	}
 	@font-face {
-		font-family: Flama Cond;
+		font-family: FlamaCn;
 		src: url(../assets/flama-cond-basic.otf);
 	}
 
 	body {
 		margin: 0;
-		background: black;
+		background: #000;
+		color: #FFF;
 		font-family: Flama, sans-serif;
 		font-size: 18px;
+		text-align: center;
 	}
 	a {
 		color: yellow;
@@ -28,6 +30,7 @@
 	}
 	ul {
 		padding: 0;
+		list-style: none;
 	}
 	.hide {
 		display: none;
@@ -48,9 +51,40 @@
 
 /* Content */
 
-	.content {
+	header {
+		margin-top: 4em;
 	}
-
+	header p {
+		font-size: .825em;
+		margin-top: .25em;
+	}
+	.new_stuff {
+		font-size: 1.5em;
+	}
+	.stripe {
+		background: yellow;
+		color: black;
+		font-size: 1.5em;
+	}
+	.stripe strong {
+		display: block;
+	}
+	.stripe p {
+		padding: .25em;
+	}
+	.scope, .small {
+		font-size: .75em;
+		text-align: left;
+		padding: 0 2em;
+	}
+	.delivery {
+		list-style: none;
+	}
+	.sign {
+		font-family: FlamaCn;
+		text-align: left;
+		padding: 0 1.75em;
+	}
 
 
 
