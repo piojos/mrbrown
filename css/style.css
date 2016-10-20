@@ -17,14 +17,15 @@
 
 	body {
 		margin: 0;
-		background: #000;
+		background: #0b0c0f;
 		color: #FFF;
-		font-family: Flama, sans-serif;
+		font-family: FlamaLi, sans-serif;
 		font-size: 18px;
 		text-align: center;
+		-webkit-font-smoothing: antialiased;
 	}
 	a {
-		color: yellow;
+		color: #ffdf22;
 		text-decoration: none;
 		cursor: pointer;
 	}
@@ -34,6 +35,13 @@
 	}
 	.hide {
 		display: none;
+	}
+	p {
+		margin: 0;
+	}
+	strong {
+		font-family: FlamaBl;
+		font-weight: bolder;
 	}
 
 
@@ -45,7 +53,16 @@
 		background: url('../assets/burger_fallback.jpg') no-repeat;
 		background-size: cover;
 		transition: 1s opacity;
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
 	}
+	.delivery,
+	.sign {
+		max-width: 14em;
+		margin: 0 auto;
+	}
+
 
 
 
@@ -53,44 +70,128 @@
 
 	header {
 		margin-top: 4em;
+		position: relative;
+		z-index: 1;
 	}
 	header p {
 		font-size: .825em;
 		margin-top: .25em;
 	}
+	header img {
+		position: relative;
+		left: .5em;
+	}
 	.new_stuff {
+		position: relative;
 		font-size: 1.5em;
+		min-height: 12em;
+	}
+	.new_stuff ul {
+		position: absolute;
+		width: 100%;
+		font-size: 1.25em;
+		line-height: 1.25em;
+		z-index: 1;
+	}
+	.new_stuff .background {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+	.new_stuff video {
+		display: none;
+	}
+	.new_stuff img {
+		max-width: 80%;
+		margin: 0 auto;
+		display: block;
 	}
 	.stripe {
-		background: yellow;
-		color: black;
+		background: #ffdf22;
+		color: #0b0c0f;
 		font-size: 1.5em;
+		padding: .5em 0 .5em;
+		letter-spacing: .1em;
+		margin-bottom: 2em;
 	}
 	.stripe strong {
 		display: block;
+		font-size: 1.15em;
+		letter-spacing: 0;
 	}
 	.stripe p {
 		padding: .25em;
 	}
-	.scope, .small {
+	.scope {
 		font-size: .75em;
 		text-align: left;
-		padding: 0 2em;
+		padding-left: 5em;
+	}
+	.slogan > a {
+		font-size: 1.5em;
 	}
 	.delivery {
 		list-style: none;
+		text-align: left;
+	}
+	.slogan {
+		font-family: FlamaBl;
+		font-size: 1.75em;
+		margin-bottom: .5em;
+	}
+	img.bike {
+		float: left;
+		margin-right: 1em;
 	}
 	.sign {
 		font-family: FlamaCn;
 		text-align: left;
+		margin: 2em auto 4em;
 		padding: 0 1.75em;
+	}
+	.sign img {
+		vertical-align: bottom;
+		margin-right: .5em;
 	}
 
 
 
 
 /* Queries */
-	@media(max-width:425px) {
-	}
-	@media screen and (max-device-width: 800px) {
+
+	@media screen and (min-width: 768px) {
+		.new_stuff,
+		.delivery,
+		.sign {
+			max-width: 34em;
+			margin: 0 auto;
+			clear: both;
+		}
+		.new_stuff {
+			margin-top: -2em;
+		}
+		.new_stuff ul {
+			-webkit-column-count: 2; /* Chrome, Safari, Opera */
+			-moz-column-count: 2; /* Firefox */
+			column-count: 2;
+			margin-top: 4.5em;
+		}
+		.new_stuff video {
+			display: block; }
+		.new_stuff img {
+			display: none; }
+		.delivery > div {
+			width: 50%;
+			float: left;
+			overflow: auto;
+		}
+		.stripe strong {
+			display: inline;
+		}
+		.sign {
+			margin: 6em auto 4em;
+		}
+		.sign {
+			margin: 4em auto;
+		}
 	}
